@@ -14,7 +14,7 @@ RUN service postgresql start && psql --command "CREATE USER root WITH SUPERUSER 
 USER root
 RUN /bin/bash -l -c "gem install rails -v 4.1.1 --no-ri --no-rdoc"
 RUN /bin/bash -l -c "gem install bundler rspec activerecord sqlite3 rake database_cleaner oj faraday"
-RUN /bin/bash -l -c "gem install rails rspec-rails capybara selenium-webdriver better_errors sprockets_better_errors binding_of_caller factory_girl_rails simplecov database_cleaner sqlite3 pry pg google-analytics-rails rails_12factor bootstrap-sass devise airbrake mina flatiron-rails"
+RUN /bin/bash -l -c "gem install rails rspec-rails capybara selenium-webdriver better_errors sprockets_better_errors binding_of_caller factory_girl_rails simplecov database_cleaner sqlite3 pry pg google-analytics-rails rails_12factor bootstrap-sass devise airbrake mina flatiron-rails octokit"
 ADD fake_brew.sh /usr/local/bin/brew
 ENV HOME '/'
 EXPOSE 3000
